@@ -1,11 +1,13 @@
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{font-family:Inter,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s}
-.glass{background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.07);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,background .35s}
+.glass{background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,background .35s}
+header .glass{backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+@media (max-width:767px){.glass{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}}
 .dark .glass{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
 .hover-lift:hover{transform:translateY(-6px);box-shadow:0 24px 48px -16px rgba(0,113,227,.35);border-color:rgba(10,132,255,.5)}
 .dark .hover-lift:hover{background:rgba(255,255,255,.09)}
 .grad-text{background:linear-gradient(135deg,#0a84ff,#bf5af2 55%,#ff375f);-webkit-background-clip:text;background-clip:text;color:transparent}
-.blob{position:absolute;border-radius:9999px;filter:blur(110px);opacity:.35;pointer-events:none}
+.blob{position:absolute;border-radius:9999px;opacity:.35;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 0%,rgba(0,0,0,.6) 45%,transparent 100%);mask-image:radial-gradient(closest-side,#000 0%,rgba(0,0,0,.6) 45%,transparent 100%)}
 .chip{transition:all .25s}
 .chip[aria-pressed=true]{background:#0a84ff;color:#fff;border-color:#0a84ff}
 .hero-in{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
